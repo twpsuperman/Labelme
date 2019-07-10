@@ -30,10 +30,10 @@ NAME_LABEL_MAP = {
     }
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('json_file')
-    parser.add_argument('-o', '--out', default=None)
-    args = parser.parse_args()
+    parser = argparse.ArgumentParser()#生成一个parser对象
+    parser.add_argument('json_file')#输入位置参数，文件位置
+    parser.add_argument('-o', '--out', default=None)#输出文件位置
+    args = parser.parse_args()#采用对象的parser_args来获取解析器
 
     json_file = args.json_file
 
@@ -42,7 +42,7 @@ def main():
         path = os.path.join(json_file, list[i])
         filename = list[i][:-5]       # .json
         if os.path.isfile(path):
-            data = json.load(open(path))
+            data = json.load(open(path))#加载json文件
             img = utils.image.img_b64_to_arr(data['imageData'])
             #lbl存储 mask，lbl_names 存储对应的label,字典
             lbl, lbl_names = utils.shape.labelme_shapes_to_label(img.shape, data['shapes'])  # labelme_shapes_to_label
