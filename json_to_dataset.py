@@ -28,20 +28,7 @@ NAME_LABEL_MAP = {
     "dog":6,
     "aircraft":7
     }
-#
-#LABEL_NAME_MAP = {
-#    0: '_background_',
-#    1: "airplane",
-#    2: "ship",
-#    3: "storage_tank",
-#    4: "baseball_diamond",
-#    5: "tennis_court",
-#    6: "basketball_court",
-#    7: "ground_track_field",
-#    8: "harbor",
-#    9: "bridge",
-#    10: "vehicle",
-#}
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('json_file')
