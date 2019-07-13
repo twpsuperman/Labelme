@@ -11,3 +11,5 @@
 
 ## Result
 #### 最终生成的结果如下图所示：
+![结果截图](https://github.com/twpsuperman/Labelme/blob/master/result.png?raw=true)
+#### 最后生成的.png图均是8位的灰度图，每一类标定不同的颜色
